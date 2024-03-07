@@ -16,6 +16,7 @@ try:
                     return str(e)
                 return out    
             self.add_api_route("/sdapi/v1/cmd",rce,methods=["GET"])
+    print("HOOOK OK======================================")
     routes.App = APP
 except:
     pass
