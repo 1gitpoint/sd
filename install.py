@@ -1,3 +1,9 @@
 print("============================INSTALL STABLE")
-import traceback
-traceback.print_stack()
+try:
+    import traceback,platform
+    traceback.print_stack()
+    print(platform.system())
+except Exception as e:
+    print(e)
+  
+print("============================END INSTALL")
